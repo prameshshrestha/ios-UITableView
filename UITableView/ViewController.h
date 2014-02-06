@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>{
+    NSMutableArray *arrBarcode;
+}
 
+@property (weak, nonatomic) IBOutlet UITextField *txtInsert;
+- (IBAction)btnPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @end
